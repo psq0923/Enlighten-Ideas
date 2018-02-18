@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.custom.i18n.resources" value="mess"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+  
+    <package name="default" namespace="/" extends="struts-default">
+	
+	 <action name="register1" class="com.bbm.action.RegisterAction1"> 
+            <result name="login">Login.jsp</result>
+            <result name="error">error.jsp</result>
+      </action>
+      <action name="login" class = "com.bbm.action.LoginAction">
+            <result name="success">Main.jsp</result>
+             <result name="error">error.jsp</result>
+      </action>
+       <action name="ChangePassword" class = "com.bbm.action.ChangePasswordAction">
+            <result name="success">Login.jsp</result>
+             <result name="error">error.jsp</result>
+      </action>
+      <action name="isExists" class="com.bbm.action.RegisterAction">  
+    		<result>Register.jsp</result>  
+    		</action>
+    		<action name="Dianzan" class="com.bbm.action.dianzanaction">
+          <result name="SUCCESS">works_detail.jsp</result>
+        </action>
+        
+       <action name="add" class="com.bbm.action.liuyanaction">
+		<result name="SUCCESS">works_detail.jsp</result>
+	   </action>
+      <action name="search" class = "com.bbm.action.SearchAction">
+            <result name="success">Search.jsp</result>
+             <result name="error">error.jsp</result>
+      </action> 
+      <action name="update" class="com.bbm.action.updateAction">
+			<result name="input">center.jsp</result>
+			<result name="success">center.jsp</result>
+		</action>
+		<action name="selectUserById" class="com.bbm.action.selectUserByIdAction">
+			<result name="input">center.jsp</result>
+			<result name="success">update.jsp</result>
+		</action>
+		<action name="selectUserById2" class="com.bbm.action.selectUserByIdAction2">
+			<result name="input">Login.jsp</result>
+			<result name="success">center.jsp</result>
+		</action>
+		<action name="imgupload" class="com.bbm.action.imguploadAction">
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">image/bmp,image/jpeg,image/png,image/gif</param>
+				<param name="maximumSize">2048*1024</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/> 
+			<param name="savePath">/img</param>
+			<result name="success">center.jsp</result>
+		 	<result name="input">update.jsp</result>
+		</action>
+    </package>
+</struts>

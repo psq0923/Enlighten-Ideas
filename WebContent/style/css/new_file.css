@@ -1,0 +1,93 @@
+* 
+{
+	margin: 0;
+	padding: 0;
+	font-family: arial,"微软雅黑";
+	font-size: 15px;
+}
+input {
+	outline: none;
+}
+.bg {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	/* background: rgba(0,0,0,.7); */
+}
+.nav {
+	border-radius: 4px;
+	position: absolute;
+	left: 45%;
+	margin-left: -230px;top: 0;
+	width: 460px;
+	background: white;
+	z-index: 1000000;
+	  top: 10%;  
+}
+.context {
+    text-align: left;
+
+}
+
+
+.navtable {
+	margin: 30px auto;
+}
+.navtr {
+	height: 50px;
+}
+.navtr td {
+ width: 117px;
+}
+.navtr td input.navinput {
+	padding: 6px;
+}
+.sub {
+	display: inline-block;
+	outline: #d20000;
+	cursor: pointer;
+	height: 43px;
+	width: 306px;
+	border: #d20000;
+	color: #666;
+	float: left;
+	font-size: 14px;
+	background: #009df5;
+	border-radius: 7px;
+	color: #fff;
+	margin-top: 15px;
+}
+
+ img{
+	width: 30px;
+	height:30px;
+    position:absolute;/*设定水平和垂直偏移父元素的50%，再根据实际长度将子元素上左挪回一半大小，绝对位置*/
+    left:16%; 
+    top:5%;
+}
+.action{
+	 position:absolute;/*设定水平和垂直偏移父元素的50%，再根据实际长度将子元素上左挪回一半大小，绝对位置*/
+    left:16%; 
+    top:0%;
+}
+.action02{
+	 position:absolute;/*设定水平和垂直偏移父元素的50%，再根据实际长度将子元素上左挪回一半大小，绝对位置*/
+    left:25%; 
+    top:5%;
+    font-size:25px;
+}
+.action03 {
+    position: absolute;
+    left: 35%;
+    top: -13%;
+    font-size: 45px;
+}
+.row img{
+	    width: 55px;
+    height: 50px;
+    position: absolute;
+    left: 16%;
+    top: -13%;
+}
